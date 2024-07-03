@@ -47,7 +47,7 @@ nav ul li a {
 
 .cord {
     transition: all 0.8s;
-    filter: grayscale(0.6);
+    filter: grayscale(0.7);
 }
 
 .cord:hover {
@@ -104,5 +104,11 @@ nav ul li a {
     50%,
     100% {
         transform: rotateY(180deg);
+    }
+}
+
+@media screen and (max-width:680px) {
+    .game{
+        width: 90%;
     }
 }
