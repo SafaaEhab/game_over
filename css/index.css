@@ -1,0 +1,108 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* /////////////////////////////////// */
+body {
+    background-color: #272B30;
+    font-family: "Comic Neue", cursive;
+}
+
+/* //////////////////////////////////// */
+header {
+    background-image: url("../uploads/wraper.png");
+    height: 30vh;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+/* //////////////////////////////////// */
+nav {
+    background-color: rgb(58, 73, 123);
+    margin-inline: auto;
+    margin-top: -40px;
+    letter-spacing: 0.8px;
+    font-style: italic;
+}
+
+nav img {
+    max-width: 40px;
+}
+
+nav ul li a {
+    font-size: 14px !important;
+}
+
+.nav-item .nav-link.active,
+.nav-item .nav-link:hover {
+    color: #09c !important;
+    transition: color 0.8s;
+}
+
+/* ///////////////////////////////////// */
+
+.cord {
+    transition: all 0.8s;
+    filter: grayscale(0.6);
+}
+
+.cord:hover {
+    transform: scale(1.1);
+    filter: grayscale(0);
+    cursor: pointer;
+    box-shadow: 0.2px 0.2px 5px 1px white;
+}
+
+.badge {
+    background-color: #32383e;
+}
+
+/* //////////////////////////////////////// */
+/* //////////////////////////////////////// */
+.loader {
+    box-sizing: border-box;
+    position: relative;
+    width: 48px;
+    height: 48px;
+    animation: spin 1s linear infinite;
+}
+
+.loader:after,
+.loader:before {
+    content: "";
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    border-radius: 50%;
+    background: #FF3D00;
+    animation: flipY 1s linear infinite;
+    transform-origin: 50% 50%;
+}
+
+.loader:before {
+    transform-origin: 0% 100%;
+    background: #fff;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes flipY {
+
+    0%,
+    50% {
+        transform: rotateY(0deg);
+    }
+
+    50%,
+    100% {
+        transform: rotateY(180deg);
+    }
+}
