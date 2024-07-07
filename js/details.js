@@ -32,9 +32,9 @@ export class Details {
                </div>
                <div class="col-md-8 mt-5  fw-bold">
                   <h3 class="text-warning">Title : <span>${res.title}</span></h3>
-                  <p class="text-white">Category: <span>${res.genre}</span></p>
-                  <p class="text-white">Platform: <span>${res.platform}</span></p>
-                  <p class="text-white">Status: <span>${res.status}</span></p>
+                  <p class="text-white">Category: <span class="bg-info p-1 rounded-2 text-black">${res.genre}</span></p>
+                  <p class="text-white">Platform: <span class="bg-info p-1 rounded-2 text-black">${res.platform}</span></p>
+                  <p class="text-white">Status: <span class="bg-info p-1 rounded-2 text-black">${res.status}</span></p>
                   <p class="text-white">${res.description}</p>
                     <a class="btn btn-outline-warning" target="_blank" href="${res.game_url}">Show Game</a>
                </div>
@@ -47,5 +47,7 @@ let detail = new Details();
 
 $("#btnClose").on("click", function (event) {
   document.querySelector("main").classList.remove("d-none");
+  document.querySelector(".navbar").classList.remove("d-none");
+  document.querySelector(".head").classList.remove("d-none");
   document.querySelector(".details").classList.add("d-none");
 });

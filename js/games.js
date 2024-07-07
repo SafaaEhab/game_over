@@ -47,14 +47,16 @@ export class Games {
   getId() {
     document.querySelectorAll(".card").forEach((item) => {
       item.addEventListener("click", () => {
-         this.show($(item).attr("id"));
+        this.show($(item).attr("id"));
       });
-   });
+    });
   }
 
   show(detId) {
     new Details(detId);
     document.querySelector("main").classList.add("d-none");
+    document.querySelector(".navbar").classList.add("d-none");
+    document.querySelector(".head").classList.add("d-none");
     document.querySelector(".details").classList.remove("d-none");
   }
 }
